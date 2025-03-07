@@ -1,176 +1,189 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="ru">
 
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Досвід - Портфоліо</title>
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-   <link rel="stylesheet" href="css/styles.css">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+   <title>Опыт работы</title>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+   <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap">
+   <style>
+      body {
+         display: flex;
+         flex-direction: column;
+         min-height: 100vh;
+         margin: 0;
+         font-family: 'Montserrat', sans-serif;
+         color: #fff;
+         background: linear-gradient(-45deg, #1e3c72, #2a5298, #6a11cb, #2575fc);
+         background-size: 400% 400%;
+         animation: gradientBG 15s ease infinite;
+      }
+
+      @keyframes gradientBG {
+         0% {
+            background-position: 0% 50%;
+         }
+
+         50% {
+            background-position: 100% 50%;
+         }
+
+         100% {
+            background-position: 0% 50%;
+         }
+      }
+
+      header {
+         background: rgba(0, 0, 0, 0.7);
+         backdrop-filter: blur(10px);
+      }
+
+      .navbar-brand {
+         font-family: 'Playfair Display', serif;
+         font-size: 1.5rem;
+         font-weight: bold;
+      }
+
+      .nav-link {
+         font-weight: 500;
+         transition: color 0.3s ease;
+      }
+
+      .nav-link:hover {
+         color: #ffc107 !important;
+      }
+
+      main {
+         flex: 1;
+         padding: 2rem;
+      }
+
+      .card {
+         background: rgba(255, 255, 255, 0.1);
+         border-radius: 15px;
+         border: 1px solid rgba(255, 255, 255, 0.2);
+         backdrop-filter: blur(10px);
+         box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+         transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .card:hover {
+         transform: translateY(-10px);
+         box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+      }
+
+      .card-img-top {
+         border-radius: 15px 15px 0 0;
+         max-width: 80px;
+         max-height: 80px;
+      }
+
+      .card-body {
+         padding: 1.5rem;
+         color: white;
+      }
+
+      h1 {
+         font-family: 'Playfair Display', serif;
+         font-size: 3rem;
+         font-weight: bold;
+         color: #fff;
+         text-align: center;
+         margin-bottom: 2rem;
+      }
+
+      footer {
+         background: rgba(0, 0, 0, 0.7);
+         backdrop-filter: blur(10px);
+         color: #fff;
+         padding: 1rem;
+         text-align: center;
+         font-size: 0.9rem;
+      }
+   </style>
 </head>
 
 <body>
-   <header class="fixed-top py-3">
+   <header class="navbar navbar-expand-lg navbar-dark fixed-top">
       <div class="container">
-         <div class="d-flex justify-content-between align-items-center">
-            <a class="navbar-brand text-white fs-3 fw-bold" href="index.html">Портфоліо програміста</a>
-            <nav>
-               <ul class="list-inline mb-0">
-                  <li class="list-inline-item"><a class="text-white text-decoration-none nav-link"
-                        href="index.html">Головна</a></li>
-                  <li class="list-inline-item"><a class="text-white text-decoration-none nav-link"
-                        href="experience.html">Досвід</a></li>
-                  <li class="list-inline-item"><a class="text-white text-decoration-none nav-link"
-                        href="projects.html">Проекти</a></li>
-                  <li class="list-inline-item"><a class="text-white text-decoration-none nav-link"
-                        href="contact.html">Контакти</a></li>
-               </ul>
-            </nav>
+         <a class="navbar-brand" href="#">Портфоліо</a>
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+               <li class="nav-item"><a class="nav-link" href="index.html">Головна</a></li>
+               <li class="nav-item"><a class="nav-link" href="experience.html">Досвід</a></li>
+               <li class="nav-item"><a class="nav-link" href="projects.html">Проекти</a></li>
+               <li class="nav-item"><a class="nav-link" href="contacts.html">Контакти</a></li>
+            </ul>
          </div>
       </div>
    </header>
 
-   <main class="flex-grow-1">
-      <div class="container my-5">
-         <h2 class="display-5 fw-bold mb-4">Досвід роботи</h2>
-         <div class="row">
-            <!-- Картка 1 -->
-            <div class="col-md-6 mb-4">
-               <div class="card h-100 shadow">
-                  <div class="card-body">
-                     <div class="d-flex align-items-center mb-3">
-                        <i class="fas fa-briefcase fa-2x text-warning me-3"></i>
-                        <h5 class="card-title mb-0">Розробник веб-додатків</h5>
-                     </div>
-                     <h6 class="text-muted mb-3">Компанія A (2020-2022)</h6>
-                     <p class="card-text">
-                        Розробка веб-додатків на React та Node.js. Оптимізація продуктивності, інтеграція з API, робота
-                        з базами даних MongoDB.
-                     </p>
-                     <ul class="list-unstyled">
-                        <li><i class="fas fa-check text-success me-2"></i>Розробка інтерфейсів користувача</li>
-                        <li><i class="fas fa-check text-success me-2"></i>Інтеграція зі сторонніми сервісами</li>
-                        <li><i class="fas fa-check text-success me-2"></i>Тестування та оптимізація коду</li>
-                     </ul>
-                  </div>
+   <main class="container mt-5 pt-5">
+      <h1>Досвід роботи</h1>
+
+      <div class="row">
+         <div class="col-md-6 mb-4">
+            <div class="card shadow-lg">
+               <img src="https://img.icons8.com/?size=100&id=XrPL0B3b7Kaz&format=png&color=000000" class="card-img-top"
+                  alt="Офис компании">
+               <div class="card-body">
+                  <h5 class="card-title">Головний розробник</h5>
+                  <p class="card-text"><strong>Компанія:</strong> Microsoft</p>
+                  <p class="card-text"><strong>Період:</strong> 2021 - 2024</p>
+                  <p class="card-text"><strong>Зарплатня:</strong> 25 000 грн./міс</p>
                </div>
             </div>
+         </div>
 
-            <!-- Картка 2 -->
-            <div class="col-md-6 mb-4">
-               <div class="card h-100 shadow">
-                  <div class="card-body">
-                     <div class="d-flex align-items-center mb-3">
-                        <i class="fas fa-laptop-code fa-2x text-warning me-3"></i>
-                        <h5 class="card-title mb-0">Технічний спеціаліст</h5>
-                     </div>
-                     <h6 class="text-muted mb-3">Компанія B (2018-2020)</h6>
-                     <p class="card-text">
-                        Підтримка та оптимізація існуючих систем. Робота з базами даних, написання технічної
-                        документації, навчання нових співробітників.
-                     </p>
-                     <ul class="list-unstyled">
-                        <li><i class="fas fa-check text-success me-2"></i>Підтримка серверів</li>
-                        <li><i class="fas fa-check text-success me-2"></i>Оптимізація баз даних</li>
-                        <li><i class="fas fa-check text-success me-2"></i>Технічна документація</li>
-                     </ul>
-                  </div>
+         <div class="col-md-6 mb-4">
+            <div class="card shadow-lg">
+               <img src="https://img.icons8.com/?size=100&id=113089&format=png&color=000000" class="card-img-top"
+                  alt="Компания 2">
+               <div class="card-body">
+                  <h5 class="card-title">Фронтенд-розробник</h5>
+                  <p class="card-text"><strong>Компанія:</strong> Apple</p>
+                  <p class="card-text"><strong>Період:</strong> 2018 - 2021</p>
+                  <p class="card-text"><strong>Зарплатня:</strong> 18 000 грн./міс</p>
                </div>
             </div>
+         </div>
 
-            <!-- Картка 3 -->
-            <div class="col-md-6 mb-4">
-               <div class="card h-100 shadow">
-                  <div class="card-body">
-                     <div class="d-flex align-items-center mb-3">
-                        <i class="fas fa-code fa-2x text-warning me-3"></i>
-                        <h5 class="card-title mb-0">Фріланс-розробник</h5>
-                     </div>
-                     <h6 class="text-muted mb-3">Фріланс (2016-2018)</h6>
-                     <p class="card-text">
-                        Розробка невеликих веб-сайтів та додатків для клієнтів. Використання HTML, CSS, JavaScript, PHP
-                        та WordPress.
-                     </p>
-                     <ul class="list-unstyled">
-                        <li><i class="fas fa-check text-success me-2"></i>Створення веб-сайтів</li>
-                        <li><i class="fas fa-check text-success me-2"></i>Інтеграція CMS</li>
-                        <li><i class="fas fa-check text-success me-2"></i>Підтримка клієнтів</li>
-                     </ul>
-                  </div>
+         <div class="col-md-6 mb-4">
+            <div class="card shadow-lg">
+               <img src="https://img.icons8.com/?size=100&id=112164&format=png&color=000000" class="card-img-top"
+                  alt="Компания 3">
+               <div class="card-body">
+                  <h5 class="card-title">Backend-розробник</h5>
+                  <p class="card-text"><strong>Компанія:</strong> Telegram</p>
+                  <p class="card-text"><strong>Період:</strong> 2016 - 2018</p>
+                  <p class="card-text"><strong>Зарплатня:</strong> 150 00 грн./міс</p>
                </div>
             </div>
+         </div>
 
-            <!-- Картка 4 -->
-            <div class="col-md-6 mb-4">
-               <div class="card h-100 shadow">
-                  <div class="card-body">
-                     <div class="d-flex align-items-center mb-3">
-                        <i class="fas fa-chart-line fa-2x text-warning me-3"></i>
-                        <h5 class="card-title mb-0">Аналітик даних</h5>
-                     </div>
-                     <h6 class="text-muted mb-3">Компанія C (2014-2016)</h6>
-                     <p class="card-text">
-                        Аналіз даних, створення звітів та візуалізація результатів. Використання Python, SQL та Tableau.
-                     </p>
-                     <ul class="list-unstyled">
-                        <li><i class="fas fa-check text-success me-2"></i>Аналіз великих наборів даних</li>
-                        <li><i class="fas fa-check text-success me-2"></i>Створення звітів</li>
-                        <li><i class="fas fa-check text-success me-2"></i>Візуалізація даних</li>
-                     </ul>
-                  </div>
+         <div class="col-md-6 mb-4">
+            <div class="card shadow-lg">
+               <img src="https://img.icons8.com/?size=100&id=Z0XpwAcgi6aL&format=png&color=000000" class="card-img-top"
+                  alt="Компания 4">
+               <div class="card-body">
+                  <h5 class="card-title">Фриланс-розробник</h5>
+                  <p class="card-text"><strong>Компанія:</strong> Самозайнятий</p>
+                  <p class="card-text"><strong>Період:</strong> 2014 - 2016</p>
+                  <p class="card-text"><strong>Зарплатня:</strong> 12 000 грн./міс</p>
                </div>
             </div>
          </div>
       </div>
    </main>
 
-   <footer class="py-5 bg-dark text-white">
-      <div class="container">
-         <div class="row text-center"> <!-- Додано text-center для вирівнювання по центру -->
-            <div class="col-md-4 mb-4"> <!-- Додано mb-4 для відступу між колонками -->
-               <h3 class="text-warning mb-4">Портфоліо</h3>
-               <p class="text-white-50">Сайт-портфоліо програміста з сучасним дизайном та анімаціями.</p>
-            </div>
-            <div class="col-md-4 mb-4">
-               <h3 class="text-warning mb-4">Швидкі посилання</h3>
-               <ul class="list-unstyled">
-                  <li><a href="index.html" class="text-white-50 text-decoration-none">Головна</a></li>
-                  <li><a href="experience.html" class="text-white-50 text-decoration-none">Досвід</a></li>
-                  <li><a href="projects.html" class="text-white-50 text-decoration-none">Проекти</a></li>
-                  <li><a href="contact.html" class="text-white-50 text-decoration-none">Контакти</a></li>
-               </ul>
-            </div>
-            <div class="col-md-4 mb-4">
-               <h3 class="text-warning mb-4">Соціальні мережі</h3>
-               <div class="d-flex justify-content-center gap-3"> <!-- Додано justify-content-center -->
-                  <!-- GitHub -->
-                  <a href="https://github.com/randomuser1" class="text-white-50 text-decoration-none fs-4"
-                     target="_blank">
-                     <i class="fab fa-github"></i>
-                  </a>
-                  <!-- LinkedIn -->
-                  <a href="https://www.linkedin.com/in/randomuser2" class="text-white-50 text-decoration-none fs-4"
-                     target="_blank">
-                     <i class="fab fa-linkedin"></i>
-                  </a>
-                  <!-- Twitter -->
-                  <a href="https://twitter.com/randomuser3" class="text-white-50 text-decoration-none fs-4"
-                     target="_blank">
-                     <i class="fab fa-twitter"></i>
-                  </a>
-                  <!-- Instagram -->
-                  <a href="https://www.instagram.com/randomuser4" class="text-white-50 text-decoration-none fs-4"
-                     target="_blank">
-                     <i class="fab fa-instagram"></i>
-                  </a>
-               </div>
-            </div>
-         </div>
-         <div class="text-center mt-4">
-            <p class="text-white-50 mb-0">&copy; 2025 Портфоліо програміста</p>
-         </div>
-      </div>
+   <footer class="bg-dark text-white text-center py-3 mt-auto">
+      &copy; 2025 Ягодченко Микита | Всі права захищені
    </footer>
 
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

@@ -1,142 +1,41 @@
 body {
-   background-image: url('../assets/background.jpg');
-   background-size: cover;
-   background-attachment: fixed;
-   color: #333;
- }
- 
- .card {
-   transition: transform 0.3s ease, box-shadow 0.3s ease;
- }
- 
- .card:hover {
-   transform: translateY(-10px);
-   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
- }
- 
- @keyframes fadeIn {
-   from { opacity: 0; transform: translateY(-20px); }
-   to { opacity: 1; transform: translateY(0); }
- }
- 
- h1, h2, .card {
-   animation: fadeIn 1s ease-in-out;
- }
-
- header {
-   background: rgba(0, 0, 0, 0.7);
-   backdrop-filter: blur(10px);
-   transition: background 0.3s ease;
- }
- 
- header.scrolled {
-   background: rgba(0, 0, 0, 0.9);
- }
- 
- .nav-link {
-   position: relative;
-   padding: 0.5rem 1rem;
-   transition: color 0.3s ease;
- }
- 
- .nav-link::after {
-   content: '';
-   position: absolute;
-   bottom: 0;
-   left: 50%;
-   width: 0;
-   height: 2px;
-   background: #ffc107;
-   transition: width 0.3s ease, left 0.3s ease;
- }
- 
- .nav-link:hover::after {
-   width: 100%;
-   left: 0;
- }
- 
- .nav-link:hover {
-   color: #ffc107 !important;
- }
-
- .flex-grow-1{
-   margin-top: 100px;
- }
-
- html, body {
-   height: 100%;
-   margin: 0;
- }
- 
- body {
-   display: flex;
-   flex-direction: column;
- }
- 
- main {
-   flex: 1;
- }
-
- .rounded-circle {
-   border: 5px solid #ffc107;
- }
-
- .card {
-   transition: transform 0.3s ease, box-shadow 0.3s ease;
- }
- 
- .card:hover {
-   transform: translateY(-10px);
-   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
- }
- 
- .card-img-top {
-   height: 200px;
-   object-fit: cover;
- }
- footer {
-   background: linear-gradient(135deg, #1e3c72, #2a5298);
-   color: white;
- }
- 
- footer a {
-   transition: color 0.3s ease;
- }
- 
- footer a:hover {
-   color: #ffc107 !important;
- }
- 
- .fab {
-   transition: transform 0.3s ease;
- }
- 
- .fab:hover {
-   transform: translateY(-5px);
- }
-
- .fab {
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.fab:hover {
-  transform: translateY(-5px);
-  color: #ffc107 !important; /* Золотистий колір при наведенні */
-}
-
-footer .row {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: #fff;
   display: flex;
-  justify-content: center; /* Вирівнюємо рядок по центру */
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-footer .col-md-4 {
-  text-align: center; /* Вирівнюємо текст по центру в кожній колонці */
+.navbar {
+  background-color: #343a40 !important;
+}
+
+.nav-link {
+  color: #fff !important;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #ffc107 !important;
+}
+
+.hero-section {
+  padding: 100px 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.skills-section, .experience-section, .projects-section, .contacts-section {
+  padding: 60px 0;
+  flex: 1;
 }
 
 .card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border: none;
   border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
 }
 
 .card:hover {
@@ -144,16 +43,36 @@ footer .col-md-4 {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-.card-title {
-  font-size: 1.5rem;
-  font-weight: bold;
+footer {
+  background-color: #343a40;
+  color: #fff;
+  margin-top: auto;
 }
 
-.card-text {
-  font-size: 1rem;
-  color: #555;
+footer a {
+  color: #ffc107;
+  transition: color 0.3s ease;
 }
 
-.list-unstyled li {
-  margin-bottom: 0.5rem;
+footer a:hover {
+  color: #fff !important;
+}
+
+.rounded-circle {
+  border: 5px solid #007bff;
+}
+
+.animate__animated {
+  animation-duration: 1s;
+}
+
+.form-control {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: #fff;
+}
+
+.form-control:focus {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
 }
